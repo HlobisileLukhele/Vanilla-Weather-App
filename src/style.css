@@ -77,10 +77,6 @@ ul {
         font-size: 16px;
         color: grey;
      }
-     .col-3:hover{
-        background-color: #ffe9e3;
-        padding: 10px;
-     }
         
     .forecast-max-temp {
             font-weight: bolder;
