@@ -22,3 +22,35 @@ function formatDate(timestamp) {
   
     return days[day];
   }
+  
+// creating a function to display weather forecast
+
+function displayForecast(response) {
+    let forecast = response.data.daily;
+  
+    let forecastElement = document.querySelector("#forecast");
+  
+    let forecastHTML = `<div class="row">`;
+    forecast.forEach(function (forecastDay, index) {
+      if (index < 4) {
+        forecastHTML =
+          forecastHTML +
+          `<div class="col-3">
+      <div class="forecast-date"> ${formatDay(forecastDay.dt)} </div>
+      <img src="http://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png" width="50px"></img>
+    <div class="forecast-temperature">
+      <span class="forecast-max-temp">${Math.round(
+        forecastDay.temp.max
+      )} / </span>
+      <span class="forecast-min-temp">${Math.round(forecastDay.temp.min)}°C</span>
+    </div>
+    </div>
+    `;
+      }
+    });
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  }
+  
