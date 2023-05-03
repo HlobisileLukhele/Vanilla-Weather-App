@@ -32,25 +32,41 @@ ul {
     margin-bottom: 20px;
     text-transform: capitalize;
   }
-    /*styling the units and forecast */
+/*styling the units and forecast */
     .main-temp strong {
         font-size: 40px;
         font-weight: 600;
-      }
-      
+    }
       .main-temp .units {
         position: relative;
         font-size: 18px;
         top: -10px;
         padding: 0;
-      }
+  }
       .other-metrics ul {
         font-size: 15px;
-      }
-      
+   }
       .weather-forecast {
         margin-top: 15px;
         text-align: center;
         font-size: 12px;
         margin-bottom: 15px;
       }
+
+ /* styling the forecast date and footer*/
+    .weather-forecast .forecast-date {
+            font-size: 16px;
+     }
+        
+    .weather-forecast .forecast-temperature {
+     }
+        
+    .forecast-max-temp {
+            font-weight: bolder;
+    }
+        
+    .footer {
+            font-size: smaller;
+            text-align: center;
+            padding-top: 5px;
+    }
