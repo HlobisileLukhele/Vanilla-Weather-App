@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </head>
 <body>
-    <!--Adding Container div-->
+    <!--Adding Container form input and temperature-->
     <div class="container">
         <div class="weather-app">
             <form id="search-form" class="mb-3">
@@ -40,7 +40,7 @@
                     </li>
                 </ul>
             </div>
-
+<!--Adding row for Temperature humidity and wind speed-->
             <div class="row">
                 <div class="col-5 main-temp">
                     <img src="" alt="icon-description" id="weather-icon">
@@ -58,11 +58,28 @@
                         <li>
                             Wind Speed:
                             <span id="wind"></span> <km>
-                            <h></h>
                         </li>
                     </ul>
                 </div>
             </div>
+            <!--Add div for weather forecast icons and tempt-->
+            <div class="weather-forecast" id="forecast">
+                <div class="row">
+                    <div class="forecast-date"> Thu</div>
+                    <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="forecast-icons" width="50px">
+                    <div class="forecast-temperature">
+                        <span class="forecast-min-temp">20 -</span>
+                        <span class="forecast-min-temp">25°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <p class="fotter">
+                <a href="https://github.com/HlobisileLukhele/Vanilla-Weather-App" alt="link to github repository"> Open source code
+                </a> by Hlobisile Lukhele
+            </p>
     
 </body>
 </html>
