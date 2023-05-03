@@ -61,7 +61,7 @@ function displayForecast(response) {
     console.log(apiUrl);
     axios.get(apiUrl).then(displayForecast);
   }
-  //Display the weather forecast 
+  //fetch the weather forecast 
 
   function displayWeather(response) {
     //Checking how to find the element in the API response
@@ -95,4 +95,29 @@ function displayForecast(response) {
   
     getForecast(response.data.coord);
   }
+  //crating function to search city and handle the submited city
+
   
+function search(city) {
+    let apiKey = "34ae1065362d42545661451bda2b8a1f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  
+    axios.get(apiUrl).then(displayWeather);
+  }
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+  }
+  
+  function showCelsiusTemp(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperture);
+  }
+  
+  let form = document.querySelector("#search-form");
+  form.addEventListener("submit", handleSubmit);
+
+  search("Pretoria");
